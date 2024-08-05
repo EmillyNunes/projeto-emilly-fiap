@@ -1,6 +1,6 @@
 # Projeto FIAP Emilly
 ## Autor
-[Emilly Nunes Simão Ferreira](www.linkedin.com/in/emilly-nunes)
+[Emilly Nunes Simão Ferreira](https://www.linkedin.com/in/emilly-nunes)
 
 ## Índice
 - [Descrição](#descrição)
@@ -12,17 +12,17 @@
 O projeto tem como objetivo demonstrar conhecimentos técnicos para o processo seletivo da vaga de desenvolvimento da FIAP, sendo ele um portal de administração de alunos e turmas para a secretaria da FIAP.
 
 ## Instalação
-Para o processo de instalação é importante seguir alguns passos
-1. Acesse o repositório publico no github:
+Para o processo de instalação, é importante seguir alguns passos
+1. Acesse o repositório público no github: [https://github.com/EmillyNunes/projeto-emilly-fiap](https://github.com/EmillyNunes/projeto-emilly-fiap)
 2. Clone o projeto localmente
 3. Verifique se possui um docker instalado em sua máquina, caso não possua instale através do link: [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
 4. Certifique-se que o docker está instalado e o projeto foi clonado, e então acesse o repositório através de um terminal e digite o seguinte comando:
 `docker-compose build`
-5. Após a finalização do build rode o seguinte comando:
+5. Após a finalização do build, rode o seguinte comando:
 `docker-compose up -d `
 6. Finalizando o processo, acesse seu navegador e insira a seguinte url:
 `http://localhost:9000/login`
-7. Para realizar o login utilize o seguinte usuário e senha:
+7. Para realizar o login, utilize o seguinte usuário e senha:
 `usuario: emilly.nunes@fiap.com.br `
 `senha: emillyfiap`
 
@@ -30,7 +30,7 @@ Para o processo de instalação é importante seguir alguns passos
 * Docker - Virtualizador de ambiente
 * [FontAwesome](https://fontawesome.com/icons) - Biblioteca de ícones
 * Javascript - Linguagem de programação
-* MySQL 5.7 - Sistema de Gerencimento de banco de dados
+* MySQL 5.7 - Sistema de Gerenciamento de banco de dados
 * SCSS - Linguagem de estilo
 * PHP 7.4 - Linguagem de programação
 
