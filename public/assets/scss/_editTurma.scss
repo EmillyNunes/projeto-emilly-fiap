@@ -1,0 +1,50 @@
+#edit_turma {
+
+    .container {
+        width: 80%;
+        max-width: 800px;
+        margin: 20px auto;
+    }
+
+    .containt-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    input {
+        background-color: transparent;
+        color: #f2f2f2;
+        border: 1px solid #ed145b;
+        border-radius: 5px;
+        height: 38px;
+        outline: none;
+        padding: 0 15px;
+        font-size: 15px;
+        width: 100%;
+    }
+
+    input::placeholder {
+        color: #f2f2f2;
+    }
+
+    textarea {
+        background-color: transparent;
+        color: #f2f2f2;
+        border: 1px solid #ed145b;
+        border-radius: 5px;
+        height: auto;
+        outline: none;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        resize: vertical;
+        width: 100%;
+    }
+
+    textarea::placeholder {
+        color: #f2f2f2;
+    }
+
+}

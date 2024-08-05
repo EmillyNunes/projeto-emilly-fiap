@@ -1,0 +1,779 @@
+@charset "UTF-8";
+body {
+  background-color: #1c1b1b;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  width: 80%;
+}
+
+p {
+  color: #ffffff;
+}
+
+h1 {
+  color: #ed145b;
+  font-weight: bold;
+}
+
+/* Estilo normal */
+button,
+a.button {
+  background-color: #ed145b;
+  padding: 20px 20px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Estilo para hover apenas em links com a classe .button */
+a.button:hover {
+  background-color: #000;
+  color: #fff;
+  -webkit-box-shadow: -1px 0px 20px -3px rgb(237, 20, 91);
+  -moz-box-shadow: -1px 0px 20px -3px rgb(237, 20, 91);
+  box-shadow: -1px 0px 20px -3px rgb(237, 20, 91);
+}
+
+/* Estilo para hover em buttons */
+button:hover {
+  background-color: #000;
+  color: #fff;
+  -webkit-box-shadow: -1px 0px 20px -3px rgb(237, 20, 91);
+  -moz-box-shadow: -1px 0px 20px -3px rgb(237, 20, 91);
+  box-shadow: -1px 0px 20px -3px rgb(237, 20, 91);
+}
+
+select {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: 1px solid #ed145b;
+  border-radius: 5px;
+  height: 38px;
+  outline: none;
+  padding: 0 15px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  width: 100%;
+  appearance: none;
+}
+
+/* Define a largura padrão para todos os inputs, selects e textareas */
+form input[type=email],
+.date-container,
+form input[type=text],
+form select,
+form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ed145b;
+  border-radius: 4px;
+}
+
+.select-wrapper i {
+  color: #ffffff;
+  position: absolute;
+  top: 36%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+option {
+  background-color: #1c1b1b;
+  color: #f2f2f2;
+  font-size: 16px;
+}
+
+#turmas, #view_turma {
+  /* Estilo para a paginação */
+}
+#turmas .container, #view_turma .container {
+  max-width: 80%;
+  margin: 20px auto;
+}
+#turmas .table-container, #view_turma .table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#turmas .containt-header, #view_turma .containt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#turmas .search, #view_turma .search {
+  margin-bottom: 20px;
+}
+#turmas .search input, #view_turma .search input {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: 1px solid #ed145b;
+  border-radius: 5px 0px 0px 5px;
+  height: 38px;
+  outline: none;
+  padding: 0 15px;
+}
+#turmas .search input::placeholder, #view_turma .search input::placeholder {
+  color: #f2f2f2;
+}
+#turmas .search button, #view_turma .search button {
+  background-color: #ed145b;
+  color: #f2f2f2;
+  border: 1px solid #ed145b;
+  border-radius: 0px 5px 5px 0px;
+  height: 40px;
+  outline: none;
+  padding: 0px 15px;
+  margin-left: -5px;
+  cursor: pointer;
+}
+#turmas table, #view_turma table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px !important;
+}
+#turmas td a i, #view_turma td a i {
+  color: #000;
+}
+#turmas th,
+#turmas td, #view_turma th,
+#view_turma td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+#turmas th, #view_turma th {
+  background-color: #ed145b;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+}
+#turmas th i, #view_turma th i {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+#turmas th.asc i, #view_turma th.asc i {
+  transform: rotate(180deg);
+}
+#turmas th.desc i, #view_turma th.desc i {
+  transform: rotate(0deg);
+}
+#turmas tbody tr:nth-child(even), #view_turma tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#turmas tbody tr:hover, #view_turma tbody tr:hover {
+  background-color: #ed145b;
+  color: #fff;
+}
+#turmas tbody tr:hover td a i, #view_turma tbody tr:hover td a i {
+  color: #fff;
+  /* Cor dos ícones */
+}
+#turmas .pagination-container, #view_turma .pagination-container {
+  text-align: center;
+  margin-top: 20px;
+}
+#turmas .pagination-container button, #view_turma .pagination-container button {
+  margin: 0 5px;
+}
+
+/* Modal container */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #000;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #ed145b;
+  width: 80%;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #ed145b;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Buttons  Model*/
+.modal-content button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#confirmDeleteBtn {
+  background-color: green;
+  color: white;
+}
+
+#cancelDeleteBtn {
+  background-color: #ccc;
+  color: black;
+}
+
+#matricularAluno {
+  background-color: green;
+  color: white;
+  margin-top: 20px;
+}
+
+#cancelarMatricula {
+  background-color: #ccc;
+  color: black;
+}
+
+#matriculaConfirmation {
+  color: green;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.modal-content input {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: 1px solid #ed145b;
+  border-radius: 5px;
+  height: 38px;
+  outline: none;
+  padding: 0 15px;
+}
+
+.modal-content input::placeholder {
+  color: #f2f2f2;
+}
+
+#create_turma .container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+#create_turma .containt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#create_turma input {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: 1px solid #ed145b;
+  border-radius: 5px;
+  height: 38px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 15px;
+  width: 100%;
+}
+#create_turma input::placeholder {
+  color: #f2f2f2;
+}
+#create_turma textarea {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: 1px solid #ed145b;
+  border-radius: 5px;
+  height: auto;
+  outline: none;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  resize: vertical;
+  width: 100%;
+}
+#create_turma textarea::placeholder {
+  color: #f2f2f2;
+}
+
+#edit_turma .container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+#edit_turma .containt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#edit_turma input {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: 1px solid #ed145b;
+  border-radius: 5px;
+  height: 38px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 15px;
+  width: 100%;
+}
+#edit_turma input::placeholder {
+  color: #f2f2f2;
+}
+#edit_turma textarea {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: 1px solid #ed145b;
+  border-radius: 5px;
+  height: auto;
+  outline: none;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  resize: vertical;
+  width: 100%;
+}
+#edit_turma textarea::placeholder {
+  color: #f2f2f2;
+}
+
+#login {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+#login .containt-login {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px 0;
+  width: 50%;
+}
+#login .containt-login h1 {
+  text-align: center;
+}
+#login .containt-login .login-container {
+  display: flex;
+  justify-content: center;
+}
+#login .containt-login form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  gap: 10px;
+}
+#login .containt-login input {
+  padding: 10px;
+  border: solid 1px #6e6e6e;
+  border-radius: 10px;
+  font-size: 15px;
+}
+#login .containt-login button {
+  background-color: #ed145b;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 10px;
+}
+#login .containt-login button:hover {
+  background-color: #1c1b1b;
+}
+
+#alunos {
+  /* Estilo para a paginação */
+  /* Modal container */
+  /* Modal content */
+  /* Close button */
+  /* Buttons  Model*/
+}
+#alunos .container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+#alunos .table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#alunos .containt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#alunos .search {
+  margin-bottom: 20px;
+}
+#alunos .search input {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: 1px solid #ed145b;
+  border-radius: 5px 0px 0px 5px;
+  height: 38px;
+  outline: none;
+  padding: 0 15px;
+}
+#alunos .search input::placeholder {
+  color: #f2f2f2;
+}
+#alunos .search button {
+  background-color: #ed145b;
+  color: #f2f2f2;
+  border: 1px solid #ed145b;
+  border-radius: 0px 5px 5px 0px;
+  height: 40px;
+  outline: none;
+  padding: 0px 15px;
+  margin-left: -5px;
+  cursor: pointer;
+}
+#alunos table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px !important;
+}
+#alunos td a i {
+  color: #000;
+}
+#alunos th, #alunos td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+#alunos th {
+  background-color: #ed145b;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+}
+#alunos th i {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+#alunos th.asc i {
+  transform: rotate(180deg);
+}
+#alunos th.desc i {
+  transform: rotate(0deg);
+}
+#alunos tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#alunos tbody tr:hover {
+  background-color: #ed145b;
+  color: #fff;
+}
+#alunos tbody tr:hover td a i {
+  color: #fff; /* Cor dos ícones */
+}
+#alunos .pagination-container {
+  text-align: center;
+  margin-top: 20px;
+}
+#alunos .pagination-container button {
+  background-color: #ed145b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+#alunos .pagination-container button:hover {
+  background-color: #000;
+}
+#alunos .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#alunos .modal-content {
+  background-color: #000;
+  margin: 15% auto;
+  border: 1px solid #ed145b;
+  width: 80%;
+}
+#alunos .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+#alunos .close:hover,
+#alunos .close:focus {
+  color: #ed145b;
+  text-decoration: none;
+  cursor: pointer;
+}
+#alunos .modal-content button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#alunos #confirmDeleteBtn {
+  background-color: green;
+  color: white;
+}
+#alunos #cancelDeleteBtn {
+  background-color: #ccc;
+  color: black;
+}
+
+#edit_aluno body {
+  background-color: #1c1b1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+#edit_aluno .container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+#edit_aluno .containt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#edit_aluno input {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: 1px solid #ed145b;
+  border-radius: 5px;
+  height: 38px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 15px;
+  width: 100%;
+}
+#edit_aluno input::placeholder {
+  color: #f2f2f2;
+}
+#edit_aluno .date-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: transparent; /* Fundo transparente */
+  border: 1px solid #ed145b;
+  border-radius: 5px;
+  height: 38px;
+  padding: 0 15px;
+  width: 100%;
+}
+#edit_aluno .date-container input[type=date] {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+#edit_aluno .date-container i {
+  position: absolute;
+  right: 10px;
+  color: #fff;
+  pointer-events: none;
+}
+#edit_aluno .date-container input[type=date]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+#edit_aluno input[type=date]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  color: #fff;
+}
+#edit_aluno input[type=date] {
+  color: #fff;
+}
+
+#create_aluno body {
+  background-color: #1c1b1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+#create_aluno .container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+#create_aluno .containt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#create_aluno input {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: 1px solid #ed145b;
+  border-radius: 5px;
+  height: 38px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 15px;
+  width: 100%;
+}
+#create_aluno input::placeholder {
+  color: #f2f2f2;
+}
+#create_aluno .date-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: transparent; /* Fundo transparente */
+  border: 1px solid #ed145b;
+  border-radius: 5px;
+  height: 38px;
+  padding: 0 15px;
+  width: 100%;
+}
+#create_aluno .date-container input[type=date] {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+#create_aluno .date-container i {
+  position: absolute;
+  right: 10px;
+  color: #fff;
+  pointer-events: none;
+}
+#create_aluno .date-container input[type=date]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+#create_aluno input[type=date]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  color: #fff;
+}
+#create_aluno input[type=date] {
+  color: #fff;
+}
+
+#dashboard {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+#dashboard .containt-dashboard {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px 0;
+  width: 50%;
+}
+#dashboard .containt-dashboard h1 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+#dashboard .containt-dashboard h2 {
+  text-align: center;
+  font-weight: bold;
+}
+#dashboard .containt-dashboard .cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#dashboard .containt-dashboard .card {
+  color: #1c1b1b;
+  border: solid 1px #6e6e6e;
+  border-radius: 10px;
+  width: 150px;
+  padding: 20px;
+  text-decoration: none;
+}
+#dashboard .containt-dashboard .card:hover {
+  background-color: #ed145b;
+  color: #fff;
+}
+#dashboard .containt-dashboard input {
+  padding: 10px;
+  border: solid 1px #6e6e6e;
+  border-radius: 10px;
+  font-size: 15px;
+}
+#dashboard .containt-dashboard button {
+  background-color: #ed145b;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 10px;
+}
+#dashboard .containt-dashboard button:hover {
+  background-color: #1c1b1b;
+}
+
+/*# sourceMappingURL=main.css.map */

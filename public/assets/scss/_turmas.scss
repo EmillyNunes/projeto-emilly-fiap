@@ -1,0 +1,200 @@
+#turmas, #view_turma {
+
+    .container {
+        max-width: 80%;
+        margin: 20px auto;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .containt-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .search {
+        margin-bottom: 20px;
+    }
+
+    .search input {
+        background-color: transparent;
+        color: #f2f2f2;
+        border: 1px solid #ed145b;
+        border-radius: 5px 0px 0px 5px;
+        height: 38px;
+        outline: none;
+        padding: 0 15px;
+    }
+
+    .search input::placeholder {
+        color: #f2f2f2;
+    }
+
+    .search button {
+        background-color: #ed145b;
+        color: #f2f2f2;
+        border: 1px solid #ed145b;
+        border-radius: 0px 5px 5px 0px;
+        height: 40px;
+        outline: none;
+        padding: 0px 15px;
+        margin-left: -5px;
+        cursor: pointer;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        color: #000;
+        border-radius: 5px !important;
+    }
+
+    td a i {
+        color: #000;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background-color: #ed145b;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        white-space: nowrap;
+    }
+
+    th i {
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+
+    th.asc i {
+        transform: rotate(180deg);
+    }
+
+    th.desc i {
+        transform: rotate(0deg);
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tbody tr:hover {
+        background-color: #ed145b;
+        color: #fff;
+    }
+
+    tbody tr:hover td a i {
+        color: #fff;
+    }
+
+    .pagination-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .pagination-container button {
+        margin: 0 5px;
+    }
+
+}
+
+/* Modal container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #000;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #ed145b;
+    width: 80%;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #ed145b;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Buttons  Model*/
+.modal-content button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirmDeleteBtn {
+    background-color: green;
+    color: white;
+}
+
+#cancelDeleteBtn {
+    background-color: #ccc;
+    color: black;
+}
+
+#matricularAluno {
+    background-color: green;
+    color: white;
+    margin-top: 20px;
+}
+
+#cancelarMatricula {
+    background-color: #ccc;
+    color: black;
+}
+
+#matriculaConfirmation {
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+.modal-content input {
+    background-color: transparent;
+    color: #f2f2f2;
+    border: 1px solid #ed145b;
+    border-radius: 5px;
+    height: 38px;
+    outline: none;
+    padding: 0 15px;
+}
+
+.modal-content input::placeholder {
+    color: #f2f2f2;
+}

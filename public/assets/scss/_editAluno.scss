@@ -1,0 +1,86 @@
+#edit_aluno{
+    body {
+        background-color: #1c1b1b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #fff;
+    }
+    
+    
+    .container {
+        width: 80%;
+        max-width: 800px;
+        margin: 20px auto;
+    }
+    
+    .containt-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    input{
+        background-color: transparent;
+        color: #f2f2f2;
+        border: 1px solid #ed145b;
+        border-radius: 5px;
+        height: 38px;
+        outline: none;
+        padding: 0 15px;
+        font-size: 15px;
+        width: 100%;
+    }
+    input::placeholder {
+        color: #f2f2f2;
+    }
+    
+    .date-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: 1px solid #ed145b;
+        border-radius: 5px;
+        height: 38px;
+        padding: 0 15px;
+        width: 100%;
+    }
+    
+    .date-container input[type="date"] {
+        background-color: transparent;
+        color: #f2f2f2;
+        border: none;
+        outline: none;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .date-container i {
+        position: absolute;
+        right: 10px;
+        color: #fff;
+        pointer-events: none;
+    }
+    
+    .date-container input[type="date"]::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+    }
+    
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        background: transparent;
+        color: #fff;
+    }
+    
+    input[type="date"] {
+        color: #fff;
+    }
+    
+}

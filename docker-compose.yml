@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  php:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: php -S 0.0.0.0:9000 -t public
+    ports:
+      - "9000:9000"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    platform: linux/amd64
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root@123
+      MYSQL_DATABASE: db_fiap
+      MYSQL_USER: emilly
+      MYSQL_PASSWORD: emilly@123
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+
+volumes:
+  db_data:

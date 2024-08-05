@@ -1,0 +1,115 @@
+body {
+    background-color: #1c1b1b;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: $white-color;
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    width: 80%;
+}
+
+p{
+    color: $white-color;
+}
+
+h1 {
+    color: $pink-color;
+    font-weight: bold;
+}
+
+
+//buttons
+button,
+a.button {
+    background-color: $pink-color;
+    padding: 20px 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Estilo para hover apenas em links com a classe .button */
+a.button:hover {
+    background-color: $black-color;
+    color: #fff;
+    -webkit-box-shadow: -1px 0px 20px -3px rgba(237, 20, 91, 1);
+    -moz-box-shadow: -1px 0px 20px -3px rgba(237, 20, 91, 1);
+    box-shadow: -1px 0px 20px -3px rgba(237, 20, 91, 1);
+}
+
+/* Estilo para hover em buttons */
+button:hover {
+    background-color: $black-color;
+    color: #fff;
+    -webkit-box-shadow: -1px 0px 20px -3px rgba(237, 20, 91, 1);
+    -moz-box-shadow: -1px 0px 20px -3px rgba(237, 20, 91, 1);
+    box-shadow: -1px 0px 20px -3px rgba(237, 20, 91, 1);
+}
+
+//campos de formulários 
+select {
+    background-color: transparent;
+    color: #f2f2f2;
+    border: 1px solid #ed145b;
+    border-radius: 5px;
+    height: 38px;
+    outline: none;
+    padding: 0 15px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    width: 100%;
+    appearance: none;
+}
+
+
+/* Define a largura padrão para todos os inputs, selects e textareas */
+form input[type="email"],
+.date-container,
+form input[type="text"],
+form select,
+form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.select-wrapper select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid $pink-color;
+    border-radius: 4px;
+}
+
+.select-wrapper i {
+    color: $white-color;
+    position: absolute;
+    top: 36%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+option {
+    background-color: #1c1b1b;
+    color: #f2f2f2;
+    font-size: 16px;
+}
+
