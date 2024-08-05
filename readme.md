@@ -12,9 +12,9 @@
 O projeto tem como objetivo demonstrar conhecimentos técnicos para o processo seletivo da vaga de desenvolvimento da FIAP, sendo ele um portal de administração de alunos e turmas para a secretaria da FIAP.
 
 ## Instalação
-Para o processo de instalação é importante seguir alguns passos 
-1. Acesse o repositório publico no github: 
-2. Clone o projeto localmente 
+Para o processo de instalação é importante seguir alguns passos
+1. Acesse o repositório publico no github:
+2. Clone o projeto localmente
 3. Verifique se possui um docker instalado em sua máquina, caso não possua instale através do link: [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
 4. Certifique-se que o docker está instalado e o projeto foi clonado, e então acesse o repositório através de um terminal e digite o seguinte comando:
 `docker-compose build`
@@ -27,7 +27,7 @@ Para o processo de instalação é importante seguir alguns passos
 `senha: emillyfiap`
 
 ## Tecnologias utilizadas no projeto
-* Docker - Virtualizador de ambiente 
+* Docker - Virtualizador de ambiente
 * [FontAwesome](https://fontawesome.com/icons) - Biblioteca de ícones
 * Javascript - Linguagem de programação
 * MySQL 5.7 - Sistema de Gerencimento de banco de dados
@@ -35,14 +35,14 @@ Para o processo de instalação é importante seguir alguns passos
 * PHP 7.4 - Linguagem de programação
 
 
-## Lista de urls 
+## Lista de urls
 
 LOGIN
 
 - http://localhost:9000/login - tela de login, responsável por permitir que administradores acessem o sistema através de usuario e senha.
 
 DASHBOARD
-- http://localhost:9000/dashboard - tela principal do dashboard, responsável por direcionar o administrador para visualização da ámrea de turmas ou de alunos.  
+- http://localhost:9000/dashboard - tela principal do dashboard, responsável por direcionar o administrador para visualização da ámrea de turmas ou de alunos.
 
 TURMAS e MATRÍCULAS
 
@@ -53,22 +53,7 @@ TURMAS e MATRÍCULAS
 
 ALUNOS
 
-- http://localhost:9000/alunos - visualização de todos os alunos cadastrados, principal tela desta área, 
+- http://localhost:9000/alunos - visualização de todos os alunos cadastrados, principal tela desta área,
 possivel de se acessar através do dashboard selecionando alunos.
 - http://localhost:9000/alunos/adicionar - tela responsável pelo cadastro de informações básicas sobre um aluno, como nome, data de nascimento, usuário e turma.
 - http://localhost:9000/alunos/atualizar/{id} - visualização de um aluno, na página de visualização de todos os alunos na coluna de ação é possível ver o botão que direcionada para a área de atualização das informações de um aluno.
-
-
-### Informações para desenvolvimento do projeto
-- Docker 
-    - PHP 7.4
-    - mysql
-- npm
-- Instalação do scss 
-    - npm install -g sass
-    - verifique se a estrutura de pastas esta correta 
-    - (comando para compilar) sass public/assets/scss/main.scss public/assets/css/main.css
-    - comando para visualizar em tempo real as alterações 
-    - sass --watch public/assets/scss/main.scss:public/assets/css/main.css
-
-
